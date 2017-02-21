@@ -24,7 +24,7 @@ public:
 		hash[numbers[i]] = i;
 		}
 	return result;
-	};
+	}
 }
 
 int main(){
