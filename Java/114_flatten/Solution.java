@@ -32,37 +32,62 @@ public class Solution {
 		return root;
 
 	}
+/*
+    public void flatten(TreeNode root) {
+    	Deque<TreeNode> stack = new ArrayDeque<TreeNode>();
+    	TreeNode head = root;
 
-    public List<List<Integer>> pathSum(TreeNode root, int sum) {
-        List<List<Integer>> result = new ArrayList<>();
-        buildPath(root, sum, new ArrayList<>(), result);
-        return result;
+    	while(head != null || !stack.isEmpty()){
+    		if(head.right != null){
+    			stack.push(head.right);			
+    		}    		
+    		if(head.left != null){
+    			head.right = head.left;
+    			head.left = null;    			
+    		}
+    		else if(!stack.isEmpty())
+    			head.right = stack.pop();    		
+    		head = head.right;   		
+    	}    
     }
-    
-    public void buildPath(TreeNode root, int sum, List<Integer> element, List<List<Integer>> result){
-        if(root == null) return;
-        element.add(root.val);
-        if(root.val == sum && root.left == null  && root.right == null){
-            result.add(new ArrayList<Integer>(element));
-            element.remove(element.size()-1);
-            return;
-        }
-        buildPath(root.left, sum - root.val, element, result);
-        buildPath(root.right, sum - root.val, element, result);
-        element.remove(element.size()-1);
-    }
+*/
+    private TreeNode previous = null;
+	public void flatten(TreeNode root) {
+		if(root == null) return;
+		flatten(root.right);
+		flatten(root.left);
+		root.right = previous;
+		root.left = null;
+		previous = root;
+	}    
 
 
+
+	public static void preTraversal(TreeNode head){
+		System.out.printf("[");
+		pre(head);
+		System.out.printf("\b\b]\n");
+	}
+
+	public static void pre(TreeNode head){
+		if(head == null)
+			return;
+		System.out.printf("%d, ",head.val);
+		pre(head.left);
+		pre(head.right);
+	}    	
 	
 	public static void main(String[] args) { 
 		Solution mySolution = new Solution();
-		int[] preorder = {-2,-3};
-		int[] inorder = {-2,-3};
+		int[] preorder = {3,2,4,1};
+		int[] inorder = {2,3,1,4};
 		TreeNode result = mySolution.buildTree(preorder,inorder);
-		List<List<Integer>> path = mySolution.pathSum(result,-5);
-
-		for(int i = 0; i < path.size(); i++)
-			System.out.println(path.get(i));
+		mySolution.flatten(result);
+		while(result != null){
+			System.out.printf("%d->",result.val);
+			result = result.right;
+		}
+		System.out.printf("\b\b  \n");
 
 	}    
 	
