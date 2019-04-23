@@ -6,7 +6,6 @@ Hash_Map.containsKey(key)
 map.put(key, value);
 map.get(key);
 
-
 /************************
           Array
 ************************/
@@ -21,7 +20,31 @@ ret[0] = i;
 ret[1] = j;
 
 //Length of array
-nums.length
+nums.length;
 
 //Sort an array
 Arrays.sort(num);
+
+/************************
+        List
+************************/
+List<Integer> res = new ArrayList<>();
+res.add();
+Arrays.asList(nums[i], nums[l], nums[h]);
+
+
+/************************
+        String
+************************/
+s.length();
+s.charAt(0);
+
+/************************
+        Util
+************************/
+//print
+System.out.println();
+
+
+
+
