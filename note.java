@@ -40,6 +40,14 @@ s.length();
 s.charAt(0);
 
 /************************
+    Priority Queue
+************************/
+PriorityQueue<ListNode> queue = new PriorityQueue<>(lists.length, (a, b) -> a.val - b.val);
+queue.add(list);
+cur.next = queue.poll();
+queue.isEmpty()
+
+/************************
         Util
 ************************/
 //print
