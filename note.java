@@ -39,7 +39,8 @@ Arrays.asList(nums[i], nums[l], nums[h]);
 s.length();
 s.charAt(0);
 
-
+public boolean startsWith(String prefix, int toffset)
+public boolean startsWith(String prefix)
 
 /************************
     Priority Queue
