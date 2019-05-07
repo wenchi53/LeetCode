@@ -31,6 +31,8 @@ Arrays.sort(num);
 ************************/
 List<Integer> res = new ArrayList<>();
 res.add();
+res.add(new ArrayList<>(list));
+list.remove(list.size() - 1);
 Arrays.asList(nums[i], nums[l], nums[h]);
 
 
