@@ -39,6 +39,7 @@ Arrays.asList(nums[i], nums[l], nums[h]);
 ************************/
 s.length();
 s.charAt(0);
+s.substring(from, from + min)
 
 char[] ca = s.toCharArray();
 String keyStr = String.valueOf(ca);
