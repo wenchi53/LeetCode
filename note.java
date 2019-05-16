@@ -5,7 +5,14 @@ Map<Integer, Integer> map = HashMap<>();
 Hash_Map.containsKey(key)
 map.put(key, value);
 map.get(key);
+preSum.getOrDefault(sum, 0)
 return new ArrayList<List<String>>(map.values());
+
+HashSet<String> set = new HashSet<>(wordList);
+set.add();
+set.contains(beginWord)
+set.remove(beginWord)
+set.size()
 
 /************************
           Array
@@ -25,6 +32,19 @@ nums.length;
 
 //Sort an array
 Arrays.sort(num);
+Arrays.sort(people, new Comparator<int[]>() {
+    public int compare(int[] a, int[] b) {
+        if (b[0] == a[0]) return a[1] - b[1];
+        	return b[0] - a[0];
+    }
+});
+
+/************************
+        Stack
+************************/
+
+Stack<Integer> countStack = new Stack<>();
+
 
 /************************
         List
@@ -32,9 +52,15 @@ Arrays.sort(num);
 List<Integer> res = new ArrayList<>();
 res.add();
 res.add(new ArrayList<>(list));
+result.add(person[1],new int[]{person[0],person[1]});
 list.remove(list.size() - 1);
 Arrays.asList(nums[i], nums[l], nums[h]);
 
+Queue<String> queue = new LinkedList<>();
+queue.offer(beginWord);
+String word = queue.poll();
+
+res.stream().mapToInt(i -> i).toArray()
 
 /************************
         String
@@ -42,8 +68,16 @@ Arrays.asList(nums[i], nums[l], nums[h]);
 s.length();
 s.charAt(0);
 s.substring(from, from + min)
+s.equals(endWord)
+
+email.split("@")
+parts[0].split("\\+")
+local[0].replace(".", "")
+
+String temp = String(wordUnit);
 
 char[] ca = s.toCharArray();
+Character.isDigit(s.charAt(idx));
 String keyStr = String.valueOf(ca);
 
 public boolean startsWith(String prefix, int toffset)
