@@ -64,6 +64,9 @@ String word = queue.poll();
 
 res.stream().mapToInt(i -> i).toArray()
 
+result.add(new LinkedList<>(list));
+list.contains(nums[i])
+
 /************************
         String
 ************************/
@@ -71,6 +74,8 @@ s.length();
 s.charAt(0);
 s.substring(from, from + min)
 s.equals(endWord)
+result = s.substring(i+1,j);
+str = str.trim();
 
 email.split("@")
 parts[0].split("\\+")
