@@ -56,6 +56,8 @@ result.add(person[1],new int[]{person[0],person[1]});
 list.remove(list.size() - 1);
 Arrays.asList(nums[i], nums[l], nums[h]);
 
+
+
 Queue<String> queue = new LinkedList<>();
 queue.offer(beginWord);
 String word = queue.poll();
