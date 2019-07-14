@@ -66,6 +66,36 @@ result.add(new LinkedList<>(list));
 list.contains(nums[i])
 
 /************************
+    Double Linked List
+************************/
+class Node {
+    int key;
+    int value;
+    Node next;
+    Node pre;
+    public Node(int key, int value) {
+        this.key = key;
+        this.value = value;
+    }
+}
+
+/************************
+        Trie
+************************/
+class TrieNode {
+
+    TrieNode[] children;
+    boolean isWord;
+    String word;
+
+    public TrieNode() {
+        children = new TrieNode[26];
+        isWord = false;
+        word = "";
+    }
+}
+
+/************************
         String
 ************************/
 s.length();
