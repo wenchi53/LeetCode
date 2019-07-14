@@ -91,6 +91,7 @@ class TrieNode {
     public TrieNode() {
         children = new TrieNode[26];
         isWord = false;
+        //word is optional
         word = "";
     }
 }
