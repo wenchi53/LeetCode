@@ -97,6 +97,18 @@ class TrieNode {
 }
 
 /************************
+        Graph
+************************/
+class GraphNode {
+    String den;
+    double val;
+    GraphNode(String den, double val) {
+        this.den = den;
+        this.val = val;
+    }
+}
+
+/************************
         String
 ************************/
 s.length();
@@ -131,6 +143,18 @@ PriorityQueue<ListNode> queue = new PriorityQueue<>(lists.length, (a, b) -> a.va
 queue.add(list);
 cur.next = queue.poll();
 queue.isEmpty()
+
+
+/************************
+         Deque
+************************/
+//              First Element (Head)                     Last Element (Tail)
+//       Throws exception       Special value     Throws exception    Special value
+Insert    addFirst(e)            offerFirst(e)     addLast(e)          offerLast(e)
+Remove    removeFirst()          pollFirst()       removeLast()        pollLast()
+Examine   getFirst()             peekFirst()       getLast()           peekLast()
+
+//https://docs.oracle.com/javase/8/docs/api/java/util/Deque.html
 
 /************************
         Math
