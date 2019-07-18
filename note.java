@@ -2,6 +2,8 @@
         Hash Map
 ************************/
 Map<Integer, Integer> map = HashMap<>();
+Map.Entry<Integer, Integer>
+Map.Entry<Integer, Integer> entry : map.entrySet()
 Hash_Map.containsKey(key)
 map.put(key, value);
 map.get(key);
@@ -117,6 +119,8 @@ s.substring(from, from + min)
 s.equals(endWord)
 result = s.substring(i+1,j);
 str = str.trim();
+
+Integer.parseInt(str[0])
 
 email.split("@")
 parts[0].split("\\+")
