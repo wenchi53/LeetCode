@@ -2,6 +2,8 @@
         Hash Map
 ************************/
 Map<Integer, Integer> map = HashMap<>();
+Map.Entry<Integer, Integer>
+Map.Entry<Integer, Integer> entry : map.entrySet()
 Hash_Map.containsKey(key)
 map.put(key, value);
 map.get(key);
@@ -65,6 +67,49 @@ String word = queue.poll();
 res.stream().mapToInt(i -> i).toArray()
 
 /************************
+    Double Linked List
+************************/
+class Node {
+    int key;
+    int value;
+    Node next;
+    Node pre;
+    public Node(int key, int value) {
+        this.key = key;
+        this.value = value;
+    }
+}
+
+/************************
+        Trie
+************************/
+class TrieNode {
+
+    TrieNode[] children;
+    boolean isWord;
+    String word;
+
+    public TrieNode() {
+        children = new TrieNode[26];
+        isWord = false;
+        //word is optional
+        word = "";
+    }
+}
+
+/************************
+        Graph
+************************/
+class GraphNode {
+    String den;
+    double val;
+    GraphNode(String den, double val) {
+        this.den = den;
+        this.val = val;
+    }
+}
+
+/************************
         String
 ************************/
 s.length();
@@ -73,6 +118,8 @@ s.substring(from, from + min)
 s.equals(endWord)
 s.trim()
 s.lastIndexOf(" ")
+
+Integer.parseInt(str[0])
 
 email.split("@")
 parts[0].split("\\+")
@@ -99,6 +146,18 @@ PriorityQueue<ListNode> queue = new PriorityQueue<>(lists.length, (a, b) -> a.va
 queue.add(list);
 cur.next = queue.poll();
 queue.isEmpty()
+
+
+/************************
+         Deque
+************************/
+//              First Element (Head)                     Last Element (Tail)
+//       Throws exception       Special value     Throws exception    Special value
+Insert    addFirst(e)            offerFirst(e)     addLast(e)          offerLast(e)
+Remove    removeFirst()          pollFirst()       removeLast()        pollLast()
+Examine   getFirst()             peekFirst()       getLast()           peekLast()
+
+//https://docs.oracle.com/javase/8/docs/api/java/util/Deque.html
 
 /************************
         Math
